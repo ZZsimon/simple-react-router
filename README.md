@@ -4,11 +4,36 @@ react-router可以方便地添加路由和页面，并用简单的方式保持�
 
 而建立多个路由，本质上是为了方便管理和理解一个网站，甚至可以理解为一种“数据结构”。因此如何方便的创建和管理多个路由就是一个值得研究的问题了，而react-router就是这个问题的一种解决方案。
 
-## react-router的组件
+## react-router如何使用？
+```js
+    import {
+        BrowserRouter as Router,
+        Switch,
+        Route,
+        Link,
+    }  from "./simple-react-router";
+
+    <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+```
+
+## react-router的组件实现
 
 #### \<BrowserRouter>
 
-    使用history库来创建history 对象，将这个history对象传递给Router组件，并返回Router组件
+    使用history库来创建一个history对象（对浏览器原生history对象包装了一层），将这个history对象传递给Router组件，并返回Router组件
 #### \<Router>
 
     1.内部创建location存放于state中，后续子组件的视图更新依赖于这个值，子组件通过context获取这个值
