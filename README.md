@@ -14,6 +14,20 @@ react-router可以方便地添加路由和页面，并用简单的方式保持�
     }  from "./simple-react-router";
 
     <Router>
+        <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+          </ul>
+
+          <hr />
+          
         <Switch>
           <Route exact path="/">
             <Home />
